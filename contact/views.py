@@ -10,7 +10,7 @@ def index(request):
 def result(request):
     username = request.GET['username']
     mail = request.GET['mail_id']
-    sender = 'abashedjester@gmail.com',
+    sender = '#sender mail id',
     recipient = [mail]
     image_path = 'contact/my_image.png'
     image_name = Path(image_path).name
@@ -31,7 +31,7 @@ def result(request):
     send_mail('Hello ' + username,
               message="Hello",
               html_message=body_html,
-              from_email='abashedjester@gmail.com',
+              from_email=sender,
               recipient_list=[mail],
               fail_silently=False)
 
